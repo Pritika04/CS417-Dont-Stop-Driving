@@ -1,38 +1,23 @@
 using UnityEngine;
-using System.Collections;
 
-public class HitogataFlicker : MonoBehaviour {
-    public GameObject hitogataVisuals;
-    public Transform player;
-
-    public float activeDuration = 2f;
-    public float waitDuration = 10f;
-
-    public float roadLength = 20f;
-
-    public float sideOffset = 6f;
+public class HitogataSpawner : MonoBehaviour {
+    public float spawnInterval = 8f;
+    public float activeDuration = 5f;
+    public GameObject visuals;
 
     void Start() {
-        hitogataVisuals.SetActive(false);
-        StartCoroutine(FlickerRoutine());
+        visuals.SetActive(false);
+        InvokeRepeating("TrySpawn", spawnInterval, spawnInterval);
     }
 
-    IEnumerator FlickerRoutine() {
-        while (true) {
-            yield return new WaitForSeconds(waitDuration);
+    void TrySpawn() {
+        float x = Random.Range(-3f, 3f); 
+        transform.localPosition = new Vector3(x, 0, 22f); 
+        visuals.SetActive(true);
+        Invoke("Hide", activeDuration);
+    }
 
-            float x = Random.Range(-sideOffset, sideOffset);
-
-            float z = player.position.z +
-                      Random.Range(roadLength, roadLength * 2f);
-
-            transform.position = new Vector3(x, 0, z);
-
-            hitogataVisuals.SetActive(true);
-
-            yield return new WaitForSeconds(activeDuration);
-
-            hitogataVisuals.SetActive(false);
-        }
+    void Hide() {
+        visuals.SetActive(false);
     }
 }
