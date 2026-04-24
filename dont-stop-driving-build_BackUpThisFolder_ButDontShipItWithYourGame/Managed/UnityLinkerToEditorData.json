@@ -39,6 +39,14 @@
             "icon": null
           },
           {
+            "name": "Avatar",
+            "scenes": [
+              "Assets/Scenes/environment.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Motion",
             "scenes": [],
             "dependencyType": 1,
@@ -953,7 +961,9 @@
           },
           {
             "name": "CapsuleCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/environment.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -973,7 +983,9 @@
           },
           {
             "name": "MeshCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/environment.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -985,9 +997,7 @@
           },
           {
             "name": "Rigidbody",
-            "scenes": [
-              "Assets/Scenes/environment.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
