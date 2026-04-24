@@ -1,20 +1,42 @@
+// using UnityEngine;
+
+// public class RoadMover : MonoBehaviour {
+//     public float speed = 2f;
+//     public float segmentLength = 10f; 
+//     public Transform otherSegment;
+
+//     void LateUpdate() {
+//         transform.position += Vector3.back * speed * Time.deltaTime;
+//         if (transform.position.z <= 0f) {
+//             float newZ = otherSegment.position.z + segmentLength;
+//             transform.position = new Vector3(transform.position.x, 0, newZ - 0.01f);
+//         }
+//     }
+// }
+
 using UnityEngine;
 
 public class RoadMover : MonoBehaviour {
-    public float speed = 5f;
-    public float segmentLength = 5f;
-    // We remove "otherSegment" to prevent one segment from "pulling" the other into a gap
-    
+    public float speed = 2f;
+    public float segmentLength = 10f; 
+    public Transform otherSegment;
+
     void LateUpdate() {
-        // 1. Move backward
         transform.position += Vector3.back * speed * Time.deltaTime;
 
-        // 2. The Hard Reset
-        // If the segment center passes -5, we snap it exactly 5 units ahead of the start.
-        if (transform.position.z <= -segmentLength) {
-            // Instead of relative math, we use a clean jump.
-            // This ensures that even after 100 loops, the gap never grows.
-            transform.position = new Vector3(0, 0, segmentLength);
+        if (transform.position.z <= -10f) {
+            float newZ = otherSegment.position.z + segmentLength;
+            
+            // This will print in the bottom left of Unity
+            Debug.Log(gameObject.name + " is snapping! Other segment is at: " + otherSegment.position.z + ". Snapping to: " + newZ);
+
+            transform.position = new Vector3(transform.position.x, 0, newZ - 0.01f);
         }
+    }
+
+    // This draws a red line in the Scene view so you can see the "trigger zone"
+    void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(new Vector3(-10, 0, 0), new Vector3(10, 0, 0));
     }
 }

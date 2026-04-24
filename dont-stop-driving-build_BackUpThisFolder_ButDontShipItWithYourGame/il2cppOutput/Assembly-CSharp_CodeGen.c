@@ -16,7 +16,10 @@ extern void U3CFlickerRoutineU3Ed__7_MoveNext_m0F3F0EBE5DF8CA4C3225E21C225B7F20A
 extern void U3CFlickerRoutineU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m86E128D9254516608AF121187216B652EB295E8A (void);
 extern void U3CFlickerRoutineU3Ed__7_System_Collections_IEnumerator_Reset_mF567384DAD51EE46D5DD4887F039C107FE8FCB97 (void);
 extern void U3CFlickerRoutineU3Ed__7_System_Collections_IEnumerator_get_Current_m485BCF3638F9E65E56C602A21196F40CB169C813 (void);
+extern void PlayerAnchor_Update_mCFB02A568FF412C787C511BC842167A0B63C75ED (void);
+extern void PlayerAnchor__ctor_mF96EB7CE53595238AEB2C9D2EB6955BFA49B9DC6 (void);
 extern void RoadMover_LateUpdate_m87FA478A5F65BE796459700984980515609297A2 (void);
+extern void RoadMover_OnDrawGizmos_m5E9EFDF6634EA19D077A10E14091CD23559B3168 (void);
 extern void RoadMover__ctor_m7869B3DB41F652D84282245B970ACA81F310267C (void);
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
@@ -29,7 +32,7 @@ extern void MouseLook__cctor_m711B1505E84BCA3A05135864EB1C0A2BDC013944 (void);
 extern void PlayerMovement_Awake_mA2209F4708FD6A2D96562FAF27F0D3E6BE46762B (void);
 extern void PlayerMovement_Update_m74B54D6FEC809082897298A0CCD9621DB96DAB20 (void);
 extern void PlayerMovement__ctor_m9FA4DB840633F50D65786D2D9CA1739FC5948A1F (void);
-static Il2CppMethodPointer s_methodPointers[22] = 
+static Il2CppMethodPointer s_methodPointers[25] = 
 {
 	HitogataFlicker_Start_m2690C2F651BAB6A27A23FFEAA846727F98DDCF2D,
 	HitogataFlicker_FlickerRoutine_m242BF93E0030FFA6162E3A8CA65CF9FA898D96A3,
@@ -40,7 +43,10 @@ static Il2CppMethodPointer s_methodPointers[22] =
 	U3CFlickerRoutineU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m86E128D9254516608AF121187216B652EB295E8A,
 	U3CFlickerRoutineU3Ed__7_System_Collections_IEnumerator_Reset_mF567384DAD51EE46D5DD4887F039C107FE8FCB97,
 	U3CFlickerRoutineU3Ed__7_System_Collections_IEnumerator_get_Current_m485BCF3638F9E65E56C602A21196F40CB169C813,
+	PlayerAnchor_Update_mCFB02A568FF412C787C511BC842167A0B63C75ED,
+	PlayerAnchor__ctor_mF96EB7CE53595238AEB2C9D2EB6955BFA49B9DC6,
 	RoadMover_LateUpdate_m87FA478A5F65BE796459700984980515609297A2,
+	RoadMover_OnDrawGizmos_m5E9EFDF6634EA19D077A10E14091CD23559B3168,
 	RoadMover__ctor_m7869B3DB41F652D84282245B970ACA81F310267C,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
@@ -54,7 +60,7 @@ static Il2CppMethodPointer s_methodPointers[22] =
 	PlayerMovement_Update_m74B54D6FEC809082897298A0CCD9621DB96DAB20,
 	PlayerMovement__ctor_m9FA4DB840633F50D65786D2D9CA1739FC5948A1F,
 };
-static const int32_t s_InvokerIndices[22] = 
+static const int32_t s_InvokerIndices[25] = 
 {
 	14999,
 	14787,
@@ -65,6 +71,9 @@ static const int32_t s_InvokerIndices[22] =
 	14787,
 	14999,
 	14787,
+	14999,
+	14999,
+	14999,
 	14999,
 	14999,
 	14999,
@@ -83,7 +92,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	22,
+	25,
 	s_methodPointers,
 	0,
 	NULL,
