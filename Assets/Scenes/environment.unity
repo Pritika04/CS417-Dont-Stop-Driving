@@ -591,20 +591,6 @@ MonoBehaviour:
   - {fileID: 1835321969}
   - {fileID: 1573142260}
   - {fileID: 1333450883}
---- !u!114 &596102801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: LeftHand/SecondaryButton
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  m_ActionId: 1414e4ef-05d7-40b1-b759-aa2c2c9cee56
 --- !u!1001 &639719274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2217,7 +2203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a90dd2ea817dcc498549ba32a01f1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RestartKey
-  action: {fileID: 596102801}
+  action: {fileID: 0}
 --- !u!114 &1592621683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2230,7 +2216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3e9181e1b515b40957c4461dba764d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuitKey
-  action: {fileID: 1828750910}
+  action: {fileID: 0}
 --- !u!4 &1592621684
 Transform:
   m_ObjectHideFlags: 0
@@ -2585,20 +2571,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3987966849862356548, guid: 620198af67689db4ba38ce1de4216ce3, type: 3}
   m_PrefabInstance: {fileID: 1758824030}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1828750910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: RightHand/SecondaryButton
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  m_ActionId: cba87b5e-c43b-4c38-b5dc-320d8fbb6136
 --- !u!1001 &1835321967
 PrefabInstance:
   m_ObjectHideFlags: 0
