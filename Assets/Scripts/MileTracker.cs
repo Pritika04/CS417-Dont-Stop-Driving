@@ -11,7 +11,8 @@ public class MileTracker : MonoBehaviour {
     private int currentLoops = 0;
     private int totalMiles = 0;
 
-    public RoadMover[] roads;
+    [Header("Juicy Feedback")]
+    public ParticleSystem mileTransitionEffect;
 
     public void RegisterLoop() {
         currentLoops++;
@@ -24,6 +25,10 @@ public class MileTracker : MonoBehaviour {
 
     void MarkMileDistinctly() {
         mileDisplay.text = "MILE: " + totalMiles + " / 3";
+
+        if (mileTransitionEffect != null) {
+            mileTransitionEffect.Play();
+        }
 
         switch (totalMiles) {
             case 1:
@@ -53,12 +58,6 @@ public class MileTracker : MonoBehaviour {
 
     void WinGame() {
         mileDisplay.text = "YOU SURVIVED!";
-
-        if (roads != null) {
-            foreach (RoadMover road in roads) {
-                road.speed = 0f; 
-            }
-        }
 
         StartCoroutine(WaitAndQuit());
     }
