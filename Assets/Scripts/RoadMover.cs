@@ -6,6 +6,8 @@ public class RoadMover : MonoBehaviour {
     public float segmentLength = 30f; 
     public Transform otherSegment;
 
+    public MileTracker mileTracker; 
+
     [Header("Decoration Settings")]
     public GameObject[] props;
 
@@ -24,6 +26,9 @@ public class RoadMover : MonoBehaviour {
             float newZ = otherSegment.position.z + segmentLength;
             transform.position = new Vector3(transform.position.x, 0, newZ - 3.5f);
             RandomizeProps();
+            if (mileTracker != null) {
+                mileTracker.RegisterLoop();
+            }
         }
     }
 
