@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
+
 public class MileTracker : MonoBehaviour {
     public TextMeshProUGUI mileDisplay;
     public CreepyRadio creepyRadio; 
@@ -13,6 +14,8 @@ public class MileTracker : MonoBehaviour {
 
     [Header("Juicy Feedback")]
     public ParticleSystem mileTransitionEffect;
+
+    public UnityEngine.XR.Interaction.Toolkit.Locomotion.Comfort.TunnelingVignetteController vignette;
 
     public void RegisterLoop() {
         currentLoops++;
@@ -32,6 +35,7 @@ public class MileTracker : MonoBehaviour {
 
         switch (totalMiles) {
             case 1:
+                vignette.defaultParameters.apertureSize = 0.8f;
                 creepyRadio.TriggerSpookyStation(1);
                 if (carInteriorLight != null) {
                     carInteriorLight.color = Color.red;
@@ -39,6 +43,7 @@ public class MileTracker : MonoBehaviour {
                 }
                 break;
             case 2:
+                vignette.defaultParameters.apertureSize = 0.5f;
                 creepyRadio.TriggerSpookyStation(2);
                 if (carInteriorLight != null) {
                     carInteriorLight.color = Color.orange;
@@ -46,6 +51,7 @@ public class MileTracker : MonoBehaviour {
                 }
                 break;
             case 3:
+                vignette.defaultParameters.apertureSize = 0.3f;
                 creepyRadio.TriggerSpookyStation(3);
                 if (carInteriorLight != null) {
                     carInteriorLight.color = Color.green;

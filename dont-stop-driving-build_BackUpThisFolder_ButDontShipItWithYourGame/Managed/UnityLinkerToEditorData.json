@@ -57,6 +57,12 @@
             "scenes": [],
             "dependencyType": 1,
             "icon": null
+          },
+          {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
           }
         ]
       },
@@ -84,7 +90,9 @@
           },
           {
             "name": "AudioClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/environment.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -104,13 +112,17 @@
           },
           {
             "name": "AudioResource",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Scenes/environment.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AudioSource",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/environment.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -119,6 +131,18 @@
             "scenes": [],
             "dependencyType": 1,
             "icon": null
+          },
+          {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
+          },
+          {
+            "name": "Required by UnityWebRequestAudio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestaudio"
           }
         ]
       },
@@ -552,6 +576,12 @@
             "icon": "package/com.unity.modules.crashreporting"
           },
           {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
+          },
+          {
             "name": "Required by GraphicsStateCollectionSerializer Module",
             "scenes": [],
             "dependencyType": 2,
@@ -582,6 +612,12 @@
             "icon": "package/com.unity.modules.identifiers"
           },
           {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
+          },
+          {
             "name": "Required by Input Module",
             "scenes": [],
             "dependencyType": 2,
@@ -610,6 +646,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
@@ -720,6 +762,12 @@
             "icon": "package/com.unity.modules.unitywebrequest"
           },
           {
+            "name": "Required by UnityWebRequestAudio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestaudio"
+          },
+          {
             "name": "Required by VFX Module",
             "scenes": [],
             "dependencyType": 2,
@@ -747,6 +795,17 @@
             "scenes": [],
             "dependencyType": 3,
             "icon": "class/PlayerSettings"
+          }
+        ]
+      },
+      {
+        "name": "Director",
+        "dependencies": [
+          {
+            "name": "PlayableDirector",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
           }
         ]
       },
@@ -816,6 +875,10 @@
             "icon": "package/com.unity.modules.insights"
           }
         ]
+      },
+      {
+        "name": "ImageConversion",
+        "dependencies": []
       },
       {
         "name": "Input",
@@ -947,6 +1010,27 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.xr"
+          }
+        ]
+      },
+      {
+        "name": "ParticleSystem",
+        "dependencies": [
+          {
+            "name": "ParticleSystem",
+            "scenes": [
+              "Assets/Scenes/environment.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "ParticleSystemRenderer",
+            "scenes": [
+              "Assets/Scenes/environment.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
           }
         ]
       },
@@ -1119,6 +1203,12 @@
             "icon": "package/com.unity.modules.crashreporting"
           },
           {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
+          },
+          {
             "name": "Required by GraphicsStateCollectionSerializer Module",
             "scenes": [],
             "dependencyType": 2,
@@ -1149,6 +1239,12 @@
             "icon": "package/com.unity.modules.identifiers"
           },
           {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
+          },
+          {
             "name": "Required by Input Module",
             "scenes": [],
             "dependencyType": 2,
@@ -1177,6 +1273,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
@@ -1285,6 +1387,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.unitywebrequest"
+          },
+          {
+            "name": "Required by UnityWebRequestAudio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestaudio"
           },
           {
             "name": "Required by VFX Module",
@@ -1590,8 +1698,18 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.unityanalytics"
+          },
+          {
+            "name": "Required by UnityWebRequestAudio Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.unitywebrequestaudio"
           }
         ]
+      },
+      {
+        "name": "UnityWebRequestAudio",
+        "dependencies": []
       },
       {
         "name": "VFX",
