@@ -466,7 +466,7 @@ struct U3CU3Ec__DisplayClass17_0_t4E617D2AE162658126A2FA3A729E5213BDD55BA0;
 struct U3CPlayerDiedU3Ed__32_tFDA8542C7CC1883797ACA2DE73EEF43EA712930E;
 struct U3CPlayerHurtsU3Ed__31_t2B2F9DDDE461A2AC00CF479F180C5F37FD6328AB;
 struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
-struct U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255;
+struct U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2;
 struct U3CCheckIfAsyncLoadingIsCompeltedU3Ed__9_tDB5145B9F104CB2C697A902120B922BDC0596FD1;
 struct MultiDisplaySetup_tD5793E0E12F0CCE282698BBB9D99A790FEB620EC;
 struct U3CSetAudioU3Ed__10_t512D4F085A810F3C64442E2A752F5846A90071A7;
@@ -578,7 +578,7 @@ IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t1DF211CDBF5EE66A2ADC8A80956E939E8A7520E4_
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t39A2F00F3D0D29EEAE439604D074C085B8CDD38A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t4F72BBEE57C404A05425D548136EEBDAFA2989E1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tE1A64CB3B6F618DDB0B94B9A26552FD5E56AB6C5_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UISkinTextData_tB3F5731BAC818780B2C9C06092C51725CD012C58_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityEvent_1_tEEB36A367DCB5867E93AAF6BECAF3558CA71BECB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var;
@@ -839,7 +839,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass4_0_U3Cget_ItemU3Eb__0
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass6_0_U3Cget_ItemU3Eb__0_mA8F41F3536F18A6B77662FF401E4FBFB71AF6450_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass8_0_U3CContainsKeyU3Eb__0_mC726C7EE977DF8FA3AC7B007282186C01C45FFA1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass9_0_U3CTryGetValueU3Eb__0_mB647D5D10949A0AD58214E776E1C2D8B43056160_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CWaitAndQuitU3Ed__11_System_Collections_IEnumerator_Reset_mA9F9D13002B6D59C0F9CDA4617C1EE4A9570EBDC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CWaitAndQuitU3Ed__13_System_Collections_IEnumerator_Reset_m8AF92C70421DF485FF65248564CBDCECF65F08B1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_Invoke_m4810FCA7EC353CAA7770E91777A04496C5663653_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeType* UnityEvent_1_tEEB36A367DCB5867E93AAF6BECAF3558CA71BECB_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* WidgetGroup_tE3BC3AC48EE0114101623DBCFA16E44045D884D2_0_0_0_var;
@@ -1309,7 +1309,7 @@ struct U3CPlayerHurtsU3Ed__31_t2B2F9DDDE461A2AC00CF479F180C5F37FD6328AB  : publi
 	RuntimeObject* ___U3CU3E2__current;
 	HealthSystem_tF798D7431CA313C7690C7875AB58A2C199243BF8* ___U3CU3E4__this;
 };
-struct U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255  : public RuntimeObject
+struct U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -3341,6 +3341,8 @@ struct MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951  : public MonoBehav
 	int32_t ___currentLoops;
 	int32_t ___totalMiles;
 	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___mileTransitionEffect;
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___textUpdateEffect;
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___lightUpdateEffect;
 	TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* ___vignette;
 };
 struct MultiDisplayInitializeScript_t37BE32D2AF740B09AF83F71911B67EB1047BD152  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -5075,7 +5077,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MileTracker_WinGame_m4F5F3296DFBFAC7B86B9722D88237F32BB554D6C (MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MileTracker_WaitAndQuit_mB47BCCFE7572B990964BED44DDC7BC84FBCCC2BF (MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___0_routine, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__11__ctor_m01175BB7367501C98413BDA3E60D842C1F81C9B6 (U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__13__ctor_m43E0F0D908A377C3E59561F3F94ED5A41C3D5735 (U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* __this, float ___0_seconds, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_Quit_mE304382DB9A6455C2A474C8F364C7387F37E9281 (const RuntimeMethod* method) ;
@@ -6322,10 +6324,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LightToggle__ctor_m3962F236C8AAC9650ABC9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MileTracker_RegisterLoop_mB023FBB507B776755D080FA1571856CD18AAD213 (MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:21>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:23>
 		int32_t L_0 = __this->___currentLoops;
 		__this->___currentLoops = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:22>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:24>
 		int32_t L_1 = __this->___currentLoops;
 		int32_t L_2 = __this->___loopsPerMile;
 		if ((((int32_t)L_1) < ((int32_t)L_2)))
@@ -6334,18 +6336,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MileTracker_RegisterLoop_mB023FBB507B776
 		}
 	}
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:23>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:25>
 		int32_t L_3 = __this->___totalMiles;
 		__this->___totalMiles = ((int32_t)il2cpp_codegen_add(L_3, 1));
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:24>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:26>
 		__this->___currentLoops = 0;
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:25>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:27>
 		MileTracker_MarkMileDistinctly_mE65422F7EE681BA25F620AC1CFF72066AE6CAE86(__this, NULL);
 	}
 
 IL_0037:
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:27>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:29>
 		return;
 	}
 }
@@ -6362,7 +6364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MileTracker_MarkMileDistinctly_mE65422F7
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:30>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:32>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___mileDisplay;
 		int32_t* L_1 = (int32_t*)(&__this->___totalMiles);
 		String_t* L_2;
@@ -6371,8 +6373,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MileTracker_MarkMileDistinctly_mE65422F7
 		L_3 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral26299FF497668444F1919624C9511A0747D8F683, L_2, _stringLiteral4EBD99D15B38F678ED8F895A03F441D51F1167B9, NULL);
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_0, L_3);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:32>
-		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_4 = __this->___mileTransitionEffect;
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:34>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_4 = __this->___textUpdateEffect;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
 		L_5 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -6382,31 +6384,50 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MileTracker_MarkMileDistinctly_mE65422F7
 		}
 	}
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:33>
-		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_6 = __this->___mileTransitionEffect;
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:35>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_6 = __this->___textUpdateEffect;
 		NullCheck(L_6);
 		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_6, NULL);
 	}
 
 IL_003e:
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:36>
-		int32_t L_7 = __this->___totalMiles;
-		V_0 = L_7;
-		int32_t L_8 = V_0;
-		switch (((int32_t)il2cpp_codegen_subtract(L_8, 1)))
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:38>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_7 = __this->___mileTransitionEffect;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_8)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:39>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_9 = __this->___mileTransitionEffect;
+		NullCheck(L_9);
+		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_9, NULL);
+	}
+
+IL_0057:
+	{
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:42>
+		int32_t L_10 = __this->___totalMiles;
+		V_0 = L_10;
+		int32_t L_11 = V_0;
+		switch (((int32_t)il2cpp_codegen_subtract(L_11, 1)))
 		{
 			case 0:
 			{
-				goto IL_005a;
+				goto IL_0073;
 			}
 			case 1:
 			{
-				goto IL_00ad;
+				goto IL_00e2;
 			}
 			case 2:
 			{
-				goto IL_00fd;
+				goto IL_014e;
 			}
 		}
 	}
@@ -6414,127 +6435,172 @@ IL_003e:
 		return;
 	}
 
-IL_005a:
+IL_0073:
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:38>
-		TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* L_9 = __this->___vignette;
-		NullCheck(L_9);
-		VignetteParameters_tF68D7337D0B83ABF67BEF215DAF781E34ABC37D5* L_10;
-		L_10 = TunnelingVignetteController_get_defaultParameters_mC580D601FD04DC655451064AFB16576C2ED191BA_inline(L_9, NULL);
-		NullCheck(L_10);
-		VignetteParameters_set_apertureSize_m1F0F27BDED8D958A7E9984D7B91EEA96DCCC154A_inline(L_10, (0.800000012f), NULL);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:39>
-		CreepyRadio_tEFA2E1F835B9D67E69A54057FE561C6A3ED4383B* L_11 = __this->___creepyRadio;
-		NullCheck(L_11);
-		CreepyRadio_TriggerSpookyStation_mCFFC387BACD20B1B6884A2255FAA03D9B04450FD(L_11, 1, NULL);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:40>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_12 = __this->___carInteriorLight;
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:44>
+		TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* L_12 = __this->___vignette;
+		NullCheck(L_12);
+		VignetteParameters_tF68D7337D0B83ABF67BEF215DAF781E34ABC37D5* L_13;
+		L_13 = TunnelingVignetteController_get_defaultParameters_mC580D601FD04DC655451064AFB16576C2ED191BA_inline(L_12, NULL);
+		NullCheck(L_13);
+		VignetteParameters_set_apertureSize_m1F0F27BDED8D958A7E9984D7B91EEA96DCCC154A_inline(L_13, (0.800000012f), NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:45>
+		CreepyRadio_tEFA2E1F835B9D67E69A54057FE561C6A3ED4383B* L_14 = __this->___creepyRadio;
+		NullCheck(L_14);
+		CreepyRadio_TriggerSpookyStation_mCFFC387BACD20B1B6884A2255FAA03D9B04450FD(L_14, 1, NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:46>
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_15 = __this->___carInteriorLight;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_13;
-		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_13)
+		bool L_16;
+		L_16 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_15, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_16)
 		{
-			goto IL_0152;
+			goto IL_01bc;
 		}
 	}
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:41>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_14 = __this->___carInteriorLight;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15;
-		L_15 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
-		NullCheck(L_14);
-		Light_set_color_m242F09E22904E0A20D5B032A0749678B0796A87C(L_14, L_15, NULL);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:42>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_16 = __this->___carInteriorLight;
-		NullCheck(L_16);
-		Light_set_intensity_mE4820C7F39F490B92ED5EA0C3AADA7C0775BE854(L_16, (5.0f), NULL);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:44>
-		return;
-	}
-
-IL_00ad:
-	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:46>
-		TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* L_17 = __this->___vignette;
-		NullCheck(L_17);
-		VignetteParameters_tF68D7337D0B83ABF67BEF215DAF781E34ABC37D5* L_18;
-		L_18 = TunnelingVignetteController_get_defaultParameters_mC580D601FD04DC655451064AFB16576C2ED191BA_inline(L_17, NULL);
-		NullCheck(L_18);
-		VignetteParameters_set_apertureSize_m1F0F27BDED8D958A7E9984D7B91EEA96DCCC154A_inline(L_18, (0.5f), NULL);
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:47>
-		CreepyRadio_tEFA2E1F835B9D67E69A54057FE561C6A3ED4383B* L_19 = __this->___creepyRadio;
-		NullCheck(L_19);
-		CreepyRadio_TriggerSpookyStation_mCFFC387BACD20B1B6884A2255FAA03D9B04450FD(L_19, 2, NULL);
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_17 = __this->___carInteriorLight;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_18;
+		L_18 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
+		NullCheck(L_17);
+		Light_set_color_m242F09E22904E0A20D5B032A0749678B0796A87C(L_17, L_18, NULL);
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:48>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_20 = __this->___carInteriorLight;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_19 = __this->___carInteriorLight;
+		NullCheck(L_19);
+		Light_set_intensity_mE4820C7F39F490B92ED5EA0C3AADA7C0775BE854(L_19, (5.0f), NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:49>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_20 = __this->___lightUpdateEffect;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
 		L_21 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_20, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_21)
 		{
-			goto IL_0152;
+			goto IL_01bc;
 		}
 	}
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:49>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_22 = __this->___carInteriorLight;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_23;
-		L_23 = Color_get_orange_mFD73F2E8D2263B31342BE7C6D6855A2D869CF112_inline(NULL);
-		NullCheck(L_22);
-		Light_set_color_m242F09E22904E0A20D5B032A0749678B0796A87C(L_22, L_23, NULL);
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:50>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_24 = __this->___carInteriorLight;
-		NullCheck(L_24);
-		Light_set_intensity_mE4820C7F39F490B92ED5EA0C3AADA7C0775BE854(L_24, (1.0f), NULL);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:52>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_22 = __this->___lightUpdateEffect;
+		NullCheck(L_22);
+		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_22, NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:53>
 		return;
 	}
 
-IL_00fd:
+IL_00e2:
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:54>
-		TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* L_25 = __this->___vignette;
-		NullCheck(L_25);
-		VignetteParameters_tF68D7337D0B83ABF67BEF215DAF781E34ABC37D5* L_26;
-		L_26 = TunnelingVignetteController_get_defaultParameters_mC580D601FD04DC655451064AFB16576C2ED191BA_inline(L_25, NULL);
-		NullCheck(L_26);
-		VignetteParameters_set_apertureSize_m1F0F27BDED8D958A7E9984D7B91EEA96DCCC154A_inline(L_26, (0.300000012f), NULL);
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:55>
-		CreepyRadio_tEFA2E1F835B9D67E69A54057FE561C6A3ED4383B* L_27 = __this->___creepyRadio;
-		NullCheck(L_27);
-		CreepyRadio_TriggerSpookyStation_mCFFC387BACD20B1B6884A2255FAA03D9B04450FD(L_27, 3, NULL);
+		TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* L_23 = __this->___vignette;
+		NullCheck(L_23);
+		VignetteParameters_tF68D7337D0B83ABF67BEF215DAF781E34ABC37D5* L_24;
+		L_24 = TunnelingVignetteController_get_defaultParameters_mC580D601FD04DC655451064AFB16576C2ED191BA_inline(L_23, NULL);
+		NullCheck(L_24);
+		VignetteParameters_set_apertureSize_m1F0F27BDED8D958A7E9984D7B91EEA96DCCC154A_inline(L_24, (0.5f), NULL);
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:56>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_28 = __this->___carInteriorLight;
+		CreepyRadio_tEFA2E1F835B9D67E69A54057FE561C6A3ED4383B* L_25 = __this->___creepyRadio;
+		NullCheck(L_25);
+		CreepyRadio_TriggerSpookyStation_mCFFC387BACD20B1B6884A2255FAA03D9B04450FD(L_25, 2, NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:57>
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_26 = __this->___carInteriorLight;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_29;
-		L_29 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_28, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_29)
+		bool L_27;
+		L_27 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_26, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_27)
 		{
-			goto IL_014c;
+			goto IL_01bc;
 		}
 	}
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:57>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_30 = __this->___carInteriorLight;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_31;
-		L_31 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
-		NullCheck(L_30);
-		Light_set_color_m242F09E22904E0A20D5B032A0749678B0796A87C(L_30, L_31, NULL);
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:58>
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_32 = __this->___carInteriorLight;
-		NullCheck(L_32);
-		Light_set_intensity_mE4820C7F39F490B92ED5EA0C3AADA7C0775BE854(L_32, (1.0f), NULL);
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_28 = __this->___carInteriorLight;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_29;
+		L_29 = Color_get_orange_mFD73F2E8D2263B31342BE7C6D6855A2D869CF112_inline(NULL);
+		NullCheck(L_28);
+		Light_set_color_m242F09E22904E0A20D5B032A0749678B0796A87C(L_28, L_29, NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:59>
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_30 = __this->___carInteriorLight;
+		NullCheck(L_30);
+		Light_set_intensity_mE4820C7F39F490B92ED5EA0C3AADA7C0775BE854(L_30, (1.0f), NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:60>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_31 = __this->___lightUpdateEffect;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_32;
+		L_32 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_31, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_32)
+		{
+			goto IL_01bc;
+		}
+	}
+	{
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:61>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_33 = __this->___lightUpdateEffect;
+		NullCheck(L_33);
+		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_33, NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:64>
+		return;
 	}
 
-IL_014c:
+IL_014e:
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:60>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:66>
+		TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* L_34 = __this->___vignette;
+		NullCheck(L_34);
+		VignetteParameters_tF68D7337D0B83ABF67BEF215DAF781E34ABC37D5* L_35;
+		L_35 = TunnelingVignetteController_get_defaultParameters_mC580D601FD04DC655451064AFB16576C2ED191BA_inline(L_34, NULL);
+		NullCheck(L_35);
+		VignetteParameters_set_apertureSize_m1F0F27BDED8D958A7E9984D7B91EEA96DCCC154A_inline(L_35, (0.300000012f), NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:67>
+		CreepyRadio_tEFA2E1F835B9D67E69A54057FE561C6A3ED4383B* L_36 = __this->___creepyRadio;
+		NullCheck(L_36);
+		CreepyRadio_TriggerSpookyStation_mCFFC387BACD20B1B6884A2255FAA03D9B04450FD(L_36, 3, NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:68>
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_37 = __this->___carInteriorLight;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_38;
+		L_38 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_37, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_38)
+		{
+			goto IL_01b6;
+		}
+	}
+	{
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:69>
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_39 = __this->___carInteriorLight;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_40;
+		L_40 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
+		NullCheck(L_39);
+		Light_set_color_m242F09E22904E0A20D5B032A0749678B0796A87C(L_39, L_40, NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:70>
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_41 = __this->___carInteriorLight;
+		NullCheck(L_41);
+		Light_set_intensity_mE4820C7F39F490B92ED5EA0C3AADA7C0775BE854(L_41, (1.0f), NULL);
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:71>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_42 = __this->___lightUpdateEffect;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_43;
+		L_43 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_42, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_43)
+		{
+			goto IL_01b6;
+		}
+	}
+	{
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:72>
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_44 = __this->___lightUpdateEffect;
+		NullCheck(L_44);
+		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_44, NULL);
+	}
+
+IL_01b6:
+	{
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:75>
 		MileTracker_WinGame_m4F5F3296DFBFAC7B86B9722D88237F32BB554D6C(__this, NULL);
 	}
 
-IL_0152:
+IL_01bc:
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:63>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:78>
 		return;
 	}
 }
@@ -6548,16 +6614,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MileTracker_WinGame_m4F5F3296DFBFAC7B86B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:66>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:81>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___mileDisplay;
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_0, _stringLiteralA3916A0B5E2C4205EB64EF11799695CFFB83946F);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:68>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:83>
 		RuntimeObject* L_1;
 		L_1 = MileTracker_WaitAndQuit_mB47BCCFE7572B990964BED44DDC7BC84FBCCC2BF(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2;
 		L_2 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_1, NULL);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:69>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:84>
 		return;
 	}
 }
@@ -6567,12 +6633,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MileTracker_WaitAndQuit_mB47BC
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255* L_0 = (U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255*)il2cpp_codegen_object_new(U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255_il2cpp_TypeInfo_var);
-		U3CWaitAndQuitU3Ed__11__ctor_m01175BB7367501C98413BDA3E60D842C1F81C9B6(L_0, 0, NULL);
+		U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2* L_0 = (U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2*)il2cpp_codegen_object_new(U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2_il2cpp_TypeInfo_var);
+		U3CWaitAndQuitU3Ed__13__ctor_m43E0F0D908A377C3E59561F3F94ED5A41C3D5735(L_0, 0, NULL);
 		return L_0;
 	}
 }
@@ -6595,7 +6661,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MileTracker__ctor_mF79A647ECA31E41AA55F0
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // Method Definition Index: 73523
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__11__ctor_m01175BB7367501C98413BDA3E60D842C1F81C9B6 (U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__13__ctor_m43E0F0D908A377C3E59561F3F94ED5A41C3D5735 (U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -6605,14 +6671,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__11__ctor_m01175BB736
 	}
 }
 // Method Definition Index: 73524
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__11_System_IDisposable_Dispose_m784B4B8DA8723565BEDC68977AA8779F0DA2E952 (U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__13_System_IDisposable_Dispose_m7104836C1AC7C0CC80C0C485E6D5F20AB7690D5A (U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
 // Method Definition Index: 73525
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWaitAndQuitU3Ed__11_MoveNext_m9893593422C534C06F01DF3BC7121E9CD068586A (U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWaitAndQuitU3Ed__13_MoveNext_m42B91640AFEBF5A196EE87B511FB6EC12F67213B (U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -6645,7 +6711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWaitAndQuitU3Ed__11_MoveNext_m9893593
 IL_0010:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:72>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:87>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_3 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (10.0f), NULL);
 		__this->___U3CU3E2__current = L_3;
@@ -6657,15 +6723,15 @@ IL_0010:
 IL_0030:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:74>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:89>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		Application_Quit_mE304382DB9A6455C2A474C8F364C7387F37E9281(NULL);
-		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:78>
+		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/MileTracker.cs:93>
 		return (bool)0;
 	}
 }
 // Method Definition Index: 73526
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndQuitU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC58136BBA01883B8296634E51AB7917DA92B6C9C (U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndQuitU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8E54600CEC488F9574CFBDB55E5F3D40A4F44F93 (U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
@@ -6673,16 +6739,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndQuitU3Ed__11_System_
 	}
 }
 // Method Definition Index: 73527
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__11_System_Collections_IEnumerator_Reset_mA9F9D13002B6D59C0F9CDA4617C1EE4A9570EBDC (U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndQuitU3Ed__13_System_Collections_IEnumerator_Reset_m8AF92C70421DF485FF65248564CBDCECF65F08B1 (U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CWaitAndQuitU3Ed__11_System_Collections_IEnumerator_Reset_mA9F9D13002B6D59C0F9CDA4617C1EE4A9570EBDC_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CWaitAndQuitU3Ed__13_System_Collections_IEnumerator_Reset_m8AF92C70421DF485FF65248564CBDCECF65F08B1_RuntimeMethod_var)));
 	}
 }
 // Method Definition Index: 73528
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndQuitU3Ed__11_System_Collections_IEnumerator_get_Current_mF897CFB72F8B9F4AC508AC75B8680D76E03070DE (U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndQuitU3Ed__13_System_Collections_IEnumerator_get_Current_mAFF555E8D4D9EA897E0D0D86F5EA4C685407EFCD (U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
@@ -7626,7 +7692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoadMover__ctor_m7869B3DB41F652D84282245
 	}
 	{
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/RoadMover.cs:5>
-		__this->___speed = (2.0f);
+		__this->___speed = (2.29999995f);
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/RoadMover.cs:6>
 		__this->___segmentLength = (30.0f);
 		//<source_info:C:/Users/priti/Final_Project_Dont_Stop_Driving/Assets/Scripts/RoadMover.cs:14>

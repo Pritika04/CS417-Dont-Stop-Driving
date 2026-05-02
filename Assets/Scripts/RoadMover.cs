@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class RoadMover : MonoBehaviour {
-    public float speed = 2f;
+    public float speed = 2.3f;
     public float segmentLength = 30f; 
     public Transform otherSegment;
 

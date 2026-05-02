@@ -3045,7 +3045,7 @@ struct Enumerator_t600BA5FC7EA2F68C19679262670BEEA5DB0CC61D  : public RuntimeObj
 	MatchCollection_t84805BAED3D556A405EE3FD165856045026106BC* ____collection;
 	int32_t ____index;
 };
-struct U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255  : public RuntimeObject
+struct U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -34267,6 +34267,8 @@ struct MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951  : public MonoBehav
 	int32_t ___currentLoops;
 	int32_t ___totalMiles;
 	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___mileTransitionEffect;
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___textUpdateEffect;
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___lightUpdateEffect;
 	TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* ___vignette;
 };
 struct MouseLook_tF90B280A885E7B85E73804DE8EAD6D0E101157A4  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -45975,10 +45977,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8423[3] =
 	static_cast<int32_t>(offsetof(LightToggle_t6C44FD5A0C01E78EF6E2458C0D28CA50BE51896F, ___carLight)),static_cast<int32_t>(offsetof(LightToggle_t6C44FD5A0C01E78EF6E2458C0D28CA50BE51896F, ___burstParticles)),static_cast<int32_t>(offsetof(LightToggle_t6C44FD5A0C01E78EF6E2458C0D28CA50BE51896F, ___isOn)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8424[2] = 
 {
-	static_cast<int32_t>(offsetof(U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255, ___U3CU3E2__current)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8425[8] = 
+	static_cast<int32_t>(offsetof(U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2, ___U3CU3E2__current)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8425[10] = 
 {
-	static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___mileDisplay)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___creepyRadio)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___carInteriorLight)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___loopsPerMile)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___currentLoops)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___totalMiles)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___mileTransitionEffect)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___vignette)),};
+	static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___mileDisplay)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___creepyRadio)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___carInteriorLight)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___loopsPerMile)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___currentLoops)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___totalMiles)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___mileTransitionEffect)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___textUpdateEffect)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___lightUpdateEffect)),static_cast<int32_t>(offsetof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951, ___vignette)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8426[5] = 
 {
 	static_cast<int32_t>(offsetof(HitogataSpawner_t3404A459DAF56DAB9FFA41873D06526C9DBCAEDC, ___spawnInterval)),static_cast<int32_t>(offsetof(HitogataSpawner_t3404A459DAF56DAB9FFA41873D06526C9DBCAEDC, ___activeDuration)),static_cast<int32_t>(offsetof(HitogataSpawner_t3404A459DAF56DAB9FFA41873D06526C9DBCAEDC, ___visuals)),static_cast<int32_t>(offsetof(HitogataSpawner_t3404A459DAF56DAB9FFA41873D06526C9DBCAEDC, ___spawnSound)),static_cast<int32_t>(offsetof(HitogataSpawner_t3404A459DAF56DAB9FFA41873D06526C9DBCAEDC, ___spawnBurst)),};

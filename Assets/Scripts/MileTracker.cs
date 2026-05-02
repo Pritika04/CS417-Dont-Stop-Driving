@@ -14,6 +14,8 @@ public class MileTracker : MonoBehaviour {
 
     [Header("Juicy Feedback")]
     public ParticleSystem mileTransitionEffect;
+    public ParticleSystem textUpdateEffect;
+    public ParticleSystem lightUpdateEffect;
 
     public UnityEngine.XR.Interaction.Toolkit.Locomotion.Comfort.TunnelingVignetteController vignette;
 
@@ -29,10 +31,14 @@ public class MileTracker : MonoBehaviour {
     void MarkMileDistinctly() {
         mileDisplay.text = "MILE: " + totalMiles + " / 3";
 
+        if (textUpdateEffect != null) {
+            textUpdateEffect.Play();
+        }
+
         if (mileTransitionEffect != null) {
             mileTransitionEffect.Play();
         }
-
+        
         switch (totalMiles) {
             case 1:
                 vignette.defaultParameters.apertureSize = 0.8f;
@@ -40,6 +46,9 @@ public class MileTracker : MonoBehaviour {
                 if (carInteriorLight != null) {
                     carInteriorLight.color = Color.red;
                     carInteriorLight.intensity = 5f;
+                    if (lightUpdateEffect != null) {
+                        lightUpdateEffect.Play();
+                    }
                 }
                 break;
             case 2:
@@ -48,6 +57,9 @@ public class MileTracker : MonoBehaviour {
                 if (carInteriorLight != null) {
                     carInteriorLight.color = Color.orange;
                     carInteriorLight.intensity = 1f;
+                    if (lightUpdateEffect != null) {
+                        lightUpdateEffect.Play();
+                    }
                 }
                 break;
             case 3:
@@ -56,6 +68,9 @@ public class MileTracker : MonoBehaviour {
                 if (carInteriorLight != null) {
                     carInteriorLight.color = Color.green;
                     carInteriorLight.intensity = 1f;
+                    if (lightUpdateEffect != null) {
+                        lightUpdateEffect.Play();
+                    }
                 }
                 WinGame();
                 break;
