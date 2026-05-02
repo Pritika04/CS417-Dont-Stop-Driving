@@ -5095,7 +5095,7 @@ struct Enumerator_t600BA5FC7EA2F68C19679262670BEEA5DB0CC61D  : public RuntimeObj
 struct BindingsMarshaller_tB86B35329C1A614DE2FC290DF0C726D01A9747EF  : public RuntimeObject
 {
 };
-struct U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255  : public RuntimeObject
+struct U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -47729,6 +47729,8 @@ struct MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951  : public MonoBehav
 	int32_t ___currentLoops;
 	int32_t ___totalMiles;
 	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___mileTransitionEffect;
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___textUpdateEffect;
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___lightUpdateEffect;
 	TunnelingVignetteController_t29BE28C1C331F2266A7C11261728BD0AD28C997B* ___vignette;
 };
 struct MouseLook_tF90B280A885E7B85E73804DE8EAD6D0E101157A4  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -60760,7 +60762,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize8422 = { sizeof(CreepyRadio_
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8423;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize8423 = { sizeof(LightToggle_t6C44FD5A0C01E78EF6E2458C0D28CA50BE51896F), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8424;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize8424 = { sizeof(U3CWaitAndQuitU3Ed__11_t9A16446E26845BAA361F54AE5163D6CAE68B3255), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize8424 = { sizeof(U3CWaitAndQuitU3Ed__13_t24ABF1CB14E53C3E11969A42E0F1556F2613BEB2), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8425;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize8425 = { sizeof(MileTracker_t9DB4D2EAF012C65EFF6F503ABADD668EF1CFA951), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize8426;
