@@ -36256,6 +36256,9 @@ MonoBehaviour:
   greenKey: {fileID: 1103310928}
   blueKey: {fileID: 144798052}
   redKey: {fileID: 1381376619}
+  greenKeyInteractable: {fileID: 1103310930}
+  blueKeyInteractable: {fileID: 144798054}
+  redKeyInteractable: {fileID: 1381376621}
   vignette: {fileID: 1359136350}
 --- !u!1001 &1604558253
 PrefabInstance:

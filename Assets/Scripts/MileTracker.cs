@@ -3,15 +3,15 @@ using TMPro;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
 
+
 public class MileTracker : MonoBehaviour {
     public TextMeshProUGUI mileDisplay;
     public CreepyRadio creepyRadio; 
     public Light carInteriorLight;
     public int loopsPerMile = 3;
-
+    
     private int currentLoops = 0;
     private int totalMiles = 0;
-    private int health = 5;   // actual health tracking
 
     [Header("Juicy Feedback")]
     public ParticleSystem mileTransitionEffect;
@@ -19,14 +19,29 @@ public class MileTracker : MonoBehaviour {
     public ParticleSystem lightUpdateEffect;
 
     public TextMeshProUGUI healthDisplay;
+    public int health = 5;
 
     // controllers
-public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor leftController;
-public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor rightController;
+    public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor leftController;
+    public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor rightController;
+
     // keys
     public GameObject greenKey;
     public GameObject blueKey;
     public GameObject redKey;
+
+
+    // key grab states
+    private bool greenKeyGrabbed = false;
+    private bool blueKeyGrabbed = false;
+    private bool redKeyGrabbed = false;
+
+
+    // interactables
+    public UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable greenKeyInteractable;
+    public UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable blueKeyInteractable;
+    public UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable redKeyInteractable;
+
 
     public UnityEngine.XR.Interaction.Toolkit.Locomotion.Comfort.TunnelingVignetteController vignette;
 
@@ -39,54 +54,61 @@ public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor rightCo
         }
     }
 
-    // Debug helper to see what XR thinks you're holding
-    void DebugHeldObject()
-    {
-        var left = leftController.firstInteractableSelected;
-        var right = rightController.firstInteractableSelected;
 
-        Debug.Log($"LEFT HELD: {(left != null ? left.transform.name : "none")}");
-        Debug.Log($"RIGHT HELD: {(right != null ? right.transform.name : "none")}");
+    // keep track of key states
+    void Start()
+    {
+        // GREEN KEY
+        if (greenKeyInteractable != null)
+        {
+            greenKeyInteractable.selectEntered.AddListener((args) => greenKeyGrabbed = true);
+            greenKeyInteractable.selectExited.AddListener((args) => greenKeyGrabbed = false);
+        }
+
+        // BLUE KEY
+        if (blueKeyInteractable != null)
+        {
+            blueKeyInteractable.selectEntered.AddListener((args) => blueKeyGrabbed = true);
+            blueKeyInteractable.selectExited.AddListener((args) => blueKeyGrabbed = false);
+        }
+
+        // RED KEY
+        if (redKeyInteractable != null)
+        {
+            redKeyInteractable.selectEntered.AddListener((args) => redKeyGrabbed = true);
+            redKeyInteractable.selectExited.AddListener((args) => redKeyGrabbed = false);
+        }
     }
 
-    // Generic helper for holding a key
-    bool IsHolding(UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor controller, GameObject target)
+    int ApplyKeyPenalty(bool correctKeyGrabbed)
     {
-        if (controller == null || target == null)
-            return false;
+        bool anyKeyGrabbed = redKeyGrabbed || blueKeyGrabbed || greenKeyGrabbed;
 
-        var held = controller.firstInteractableSelected;
-        if (held == null)
-            return false;
+        // If NO key is held → -1
+        if (!anyKeyGrabbed)
+            return -1;
 
-        return held.transform.gameObject == target;
+        // If correct key is held BUT other keys are also held → -2
+        if (correctKeyGrabbed)
+        {
+            int keysHeld = 0;
+            if (redKeyGrabbed) keysHeld++;
+            if (blueKeyGrabbed) keysHeld++;
+            if (greenKeyGrabbed) keysHeld++;
+
+            if (keysHeld > 1)
+                return -2; // correct + wrong = penalty
+
+            return 0; // correct key ONLY
+        }
+
+        // If only wrong keys are held → -2
+        return -2;
     }
 
-    // Specific helpers
-    public bool IsHoldingGreen() => IsHolding(leftController, greenKey) || IsHolding(rightController, greenKey);
-    public bool IsHoldingBlue()  => IsHolding(leftController, blueKey)  || IsHolding(rightController, blueKey);
-    public bool IsHoldingRed()   => IsHolding(leftController, redKey)   || IsHolding(rightController, redKey);
 
-    // Returns: 0 = none, 1 = red, 2 = blue, 3 = green
-    int GetHeldKey()
-    {
-        if (IsHoldingRed()) return 1;
-        if (IsHoldingBlue()) return 2;
-        if (IsHoldingGreen()) return 3;
-        return 0;
-    }
 
-    // Health loss rules
-    int CalculateHealthLoss(int requiredKey, int heldKey)
-    {
-        if (heldKey == requiredKey)
-            return 0;   // correct key
 
-        if (heldKey == 0)
-            return 1;   // no key
-
-        return 2;       // wrong key
-    }
 
     void MarkMileDistinctly() {
         mileDisplay.text = "MILE: " + totalMiles + " / 3";
@@ -94,62 +116,115 @@ public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor rightCo
         if (textUpdateEffect != null) textUpdateEffect.Play();
         if (mileTransitionEffect != null) mileTransitionEffect.Play();
 
-        DebugHeldObject(); // TEMP DEBUG
+        int penalty = 0;
 
-        // 1 = red, 2 = blue, 3 = green
-        int requiredKey = totalMiles;
-        int heldKey = GetHeldKey();
+        switch (totalMiles) {
 
-        // Set interior light color based on held key
-        switch (heldKey)
-        {
-            case 1: carInteriorLight.color = Color.red; break;
-            case 2: carInteriorLight.color = Color.blue; break;
-            case 3: carInteriorLight.color = Color.green; break;
-            default: carInteriorLight.color = Color.white; break;
-        }
-
-        // Health logic
-        int loss = CalculateHealthLoss(requiredKey, heldKey);
-        health -= loss;
-        if (health < 0) health = 0;
-
-        healthDisplay.text = "Health: " + health + "/5";
-
-        if (health <= 0)
-        {
-            LoseGame();
-            return;
-        }
-
-        // Mile-specific spooky stuff
-        switch (totalMiles)
-        {
             case 1:
+                // REQUIRE RED KEY
+                penalty = ApplyKeyPenalty(redKeyGrabbed);
+                health += penalty;
+
+                if (health <= 0) { LoseGame(); return; }
+
+                healthDisplay.text = "Health: " + health + " / 5";
+
                 vignette.defaultParameters.apertureSize = 0.8f;
                 creepyRadio.TriggerSpookyStation(1);
+
+                if (carInteriorLight != null) {
+                    carInteriorLight.color = Color.red;
+                    carInteriorLight.intensity = 5f;
+                    if (lightUpdateEffect != null) lightUpdateEffect.Play();
+                }
                 break;
+
+
 
             case 2:
+                // REQUIRE BLUE KEY
+                penalty = ApplyKeyPenalty(blueKeyGrabbed);
+                health += penalty;
+
+                if (health <= 0) { LoseGame(); return; }
+
+                healthDisplay.text = "Health: " + health + " / 5";
+
                 vignette.defaultParameters.apertureSize = 0.5f;
                 creepyRadio.TriggerSpookyStation(2);
+
+                if (carInteriorLight != null) {
+                    carInteriorLight.color = Color.orange;
+                    carInteriorLight.intensity = 1f;
+                    if (lightUpdateEffect != null) lightUpdateEffect.Play();
+                }
                 break;
 
+
+
             case 3:
+                // REQUIRE GREEN KEY
+                penalty = ApplyKeyPenalty(greenKeyGrabbed);
+                health += penalty;
+
+                if (health <= 0) { LoseGame(); return; }
+
+                healthDisplay.text = "Health: " + health + " / 5";
+
                 vignette.defaultParameters.apertureSize = 0.3f;
                 creepyRadio.TriggerSpookyStation(3);
+
                 WinGame();
                 break;
         }
-
-        if (lightUpdateEffect != null) lightUpdateEffect.Play();
     }
 
+
+
+    void UpdateInteriorLightColorBasedOnKey()
+    {
+        if (carInteriorLight == null)
+            return;
+
+        // Priority: if multiple keys are grabbed, pick one in a consistent order
+        if (redKeyGrabbed)
+        {
+            carInteriorLight.color = Color.red;
+            return;
+        }
+
+        if (blueKeyGrabbed)
+        {
+            carInteriorLight.color = Color.blue;
+            return;
+        }
+
+        if (greenKeyGrabbed)
+        {
+            carInteriorLight.color = Color.green;
+            return;
+        }
+
+        // If no key is held, optional default
+        carInteriorLight.color = Color.white;
+    }
+
+
+    void Update()
+    {
+        UpdateInteriorLightColorBasedOnKey();
+    }
+
+
+
     void WinGame() {
+        // change interior light color
         if (carInteriorLight != null) {
             carInteriorLight.color = Color.green;
             carInteriorLight.intensity = 1f;
-            if (lightUpdateEffect != null) lightUpdateEffect.Play();
+            if (lightUpdateEffect != null) {
+                lightUpdateEffect.Play();
+            }
         }
 
         mileDisplay.text = "YOU SURVIVED!";
@@ -157,10 +232,13 @@ public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor rightCo
     }
 
     void LoseGame() {
+        // change interior light color
         if (carInteriorLight != null) {
             carInteriorLight.color = Color.red;
             carInteriorLight.intensity = 1f;
-            if (lightUpdateEffect != null) lightUpdateEffect.Play();
+            if (lightUpdateEffect != null) {
+                lightUpdateEffect.Play();
+            }
         }
 
         mileDisplay.text = "YOU LOST!";
@@ -174,5 +252,5 @@ public UnityEngine.XR.Interaction.Toolkit.Interactors.XRDirectInteractor rightCo
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
-    }
+    }   
 }
