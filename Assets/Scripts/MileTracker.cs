@@ -42,8 +42,7 @@ public class MileTracker : MonoBehaviour {
         
         switch (totalMiles) {
             case 1:
-                // HARD‑CODED HEALTH DROP
-                healthDisplay.text = "Health: 2/3";
+                healthDisplay.text = "Health: 4/5";
 
                 vignette.defaultParameters.apertureSize = 0.8f;
                 creepyRadio.TriggerSpookyStation(1);
@@ -57,8 +56,7 @@ public class MileTracker : MonoBehaviour {
                 break;
 
             case 2:
-                // HARD‑CODED HEALTH DROP
-                healthDisplay.text = "Health: 1/3";
+                healthDisplay.text = "Health: 3/5";
 
                 vignette.defaultParameters.apertureSize = 0.5f;
                 creepyRadio.TriggerSpookyStation(2);
@@ -72,8 +70,7 @@ public class MileTracker : MonoBehaviour {
                 break;
 
             case 3:
-                // HARD‑CODED HEALTH DROP
-                healthDisplay.text = "Health: 0/3";
+                healthDisplay.text = "Health: 2/5";
 
                 vignette.defaultParameters.apertureSize = 0.3f;
                 creepyRadio.TriggerSpookyStation(3);
