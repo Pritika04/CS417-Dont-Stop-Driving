@@ -3,7 +3,6 @@ using TMPro;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
 
-
 public class MileTracker : MonoBehaviour {
     public TextMeshProUGUI mileDisplay;
     public CreepyRadio creepyRadio; 
@@ -30,20 +29,21 @@ public class MileTracker : MonoBehaviour {
     public GameObject blueKey;
     public GameObject redKey;
 
-
     // key grab states
     private bool greenKeyGrabbed = false;
     private bool blueKeyGrabbed = false;
     private bool redKeyGrabbed = false;
-
 
     // interactables
     public UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable greenKeyInteractable;
     public UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable blueKeyInteractable;
     public UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable redKeyInteractable;
 
-
     public UnityEngine.XR.Interaction.Toolkit.Locomotion.Comfort.TunnelingVignetteController vignette;
+
+    // NEW: Game end flag to stop lighting overrides
+    private bool gameEnded = false;
+
 
     public void RegisterLoop() {
         currentLoops++;
@@ -55,7 +55,6 @@ public class MileTracker : MonoBehaviour {
     }
 
 
-    // keep track of key states
     void Start()
     {
         // GREEN KEY
@@ -80,15 +79,14 @@ public class MileTracker : MonoBehaviour {
         }
     }
 
+
     int ApplyKeyPenalty(bool correctKeyGrabbed)
     {
         bool anyKeyGrabbed = redKeyGrabbed || blueKeyGrabbed || greenKeyGrabbed;
 
-        // If NO key is held → -1
         if (!anyKeyGrabbed)
             return -1;
 
-        // If correct key is held BUT other keys are also held → -2
         if (correctKeyGrabbed)
         {
             int keysHeld = 0;
@@ -97,17 +95,13 @@ public class MileTracker : MonoBehaviour {
             if (greenKeyGrabbed) keysHeld++;
 
             if (keysHeld > 1)
-                return -2; // correct + wrong = penalty
+                return -2;
 
-            return 0; // correct key ONLY
+            return 0;
         }
 
-        // If only wrong keys are held → -2
         return -2;
     }
-
-
-
 
 
     void MarkMileDistinctly() {
@@ -121,7 +115,6 @@ public class MileTracker : MonoBehaviour {
         switch (totalMiles) {
 
             case 1:
-                // REQUIRE RED KEY
                 penalty = ApplyKeyPenalty(redKeyGrabbed);
                 health += penalty;
 
@@ -139,10 +132,7 @@ public class MileTracker : MonoBehaviour {
                 }
                 break;
 
-
-
             case 2:
-                // REQUIRE BLUE KEY
                 penalty = ApplyKeyPenalty(blueKeyGrabbed);
                 health += penalty;
 
@@ -160,10 +150,7 @@ public class MileTracker : MonoBehaviour {
                 }
                 break;
 
-
-
             case 3:
-                // REQUIRE GREEN KEY
                 penalty = ApplyKeyPenalty(greenKeyGrabbed);
                 health += penalty;
 
@@ -180,51 +167,46 @@ public class MileTracker : MonoBehaviour {
     }
 
 
-
     void UpdateInteriorLightColorBasedOnKey()
     {
         if (carInteriorLight == null)
             return;
 
-        // Priority: if multiple keys are grabbed, pick one in a consistent order
-        if (redKeyGrabbed)
-        {
+        if (redKeyGrabbed) {
             carInteriorLight.color = Color.red;
             return;
         }
 
-        if (blueKeyGrabbed)
-        {
+        if (blueKeyGrabbed) {
             carInteriorLight.color = Color.blue;
             return;
         }
 
-        if (greenKeyGrabbed)
-        {
+        if (greenKeyGrabbed) {
             carInteriorLight.color = Color.green;
             return;
         }
 
-        // If no key is held, optional default
         carInteriorLight.color = Color.white;
     }
 
 
     void Update()
     {
+        if (gameEnded)
+            return; // STOP all lighting overrides
+
         UpdateInteriorLightColorBasedOnKey();
     }
 
 
-
     void WinGame() {
-        // change interior light color
+        gameEnded = true;
+
         if (carInteriorLight != null) {
             carInteriorLight.color = Color.green;
             carInteriorLight.intensity = 1f;
-            if (lightUpdateEffect != null) {
-                lightUpdateEffect.Play();
-            }
+            if (lightUpdateEffect != null) lightUpdateEffect.Play();
         }
 
         mileDisplay.text = "YOU SURVIVED!";
@@ -232,18 +214,18 @@ public class MileTracker : MonoBehaviour {
     }
 
     void LoseGame() {
-        // change interior light color
+        gameEnded = true;
+
         if (carInteriorLight != null) {
             carInteriorLight.color = Color.red;
             carInteriorLight.intensity = 1f;
-            if (lightUpdateEffect != null) {
-                lightUpdateEffect.Play();
-            }
+            if (lightUpdateEffect != null) lightUpdateEffect.Play();
         }
 
         mileDisplay.text = "YOU LOST!";
         StartCoroutine(WaitAndQuit());
     }
+
 
     IEnumerator WaitAndQuit() {
         yield return new WaitForSeconds(10f);
@@ -252,5 +234,5 @@ public class MileTracker : MonoBehaviour {
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
-    }   
+    }
 }
