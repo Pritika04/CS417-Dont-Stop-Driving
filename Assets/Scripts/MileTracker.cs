@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-
 public class MileTracker : MonoBehaviour {
     public TextMeshProUGUI mileDisplay;
     public CreepyRadio creepyRadio; 
@@ -16,6 +15,8 @@ public class MileTracker : MonoBehaviour {
     public ParticleSystem mileTransitionEffect;
     public ParticleSystem textUpdateEffect;
     public ParticleSystem lightUpdateEffect;
+
+    public TextMeshProUGUI healthDisplay;
 
     public UnityEngine.XR.Interaction.Toolkit.Locomotion.Comfort.TunnelingVignetteController vignette;
 
@@ -41,6 +42,9 @@ public class MileTracker : MonoBehaviour {
         
         switch (totalMiles) {
             case 1:
+                // HARD‑CODED HEALTH DROP
+                healthDisplay.text = "Health: 2/3";
+
                 vignette.defaultParameters.apertureSize = 0.8f;
                 creepyRadio.TriggerSpookyStation(1);
                 if (carInteriorLight != null) {
@@ -51,7 +55,11 @@ public class MileTracker : MonoBehaviour {
                     }
                 }
                 break;
+
             case 2:
+                // HARD‑CODED HEALTH DROP
+                healthDisplay.text = "Health: 1/3";
+
                 vignette.defaultParameters.apertureSize = 0.5f;
                 creepyRadio.TriggerSpookyStation(2);
                 if (carInteriorLight != null) {
@@ -62,7 +70,11 @@ public class MileTracker : MonoBehaviour {
                     }
                 }
                 break;
+
             case 3:
+                // HARD‑CODED HEALTH DROP
+                healthDisplay.text = "Health: 0/3";
+
                 vignette.defaultParameters.apertureSize = 0.3f;
                 creepyRadio.TriggerSpookyStation(3);
                 if (carInteriorLight != null) {
@@ -79,7 +91,6 @@ public class MileTracker : MonoBehaviour {
 
     void WinGame() {
         mileDisplay.text = "YOU SURVIVED!";
-
         StartCoroutine(WaitAndQuit());
     }
 
